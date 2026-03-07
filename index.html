@@ -1,165 +1,165 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PehliKilkari | Baby Care Store</title>
+<title>PehliKilkari | Baby Wipes & Kids Shoes</title>
 
-<meta name="description" content="PehliKilkari Baby Care Store - Baby wipes, kids shoes and baby essentials with premium quality.">
+<meta name="description" content="Buy baby wipes and kids shoes online from PehliKilkari. Premium baby products trusted by parents in India.">
+
+<meta name="keywords" content="baby wipes india, kids shoes 2-5 years, baby care products india">
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
 body{
+font-family:Arial;
+margin:0;
 background:#f7fbff;
 }
 
 /* HEADER */
 
 header{
-background:white;
-padding:15px 40px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+padding:15px 40px;
+background:white;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
 }
 
 .logo{
 font-size:22px;
 font-weight:bold;
+color:#ff4f93;
 }
 
 nav a{
-margin:0 15px;
+margin-left:20px;
 text-decoration:none;
-color:#333;
+color:black;
 font-weight:bold;
 }
 
 /* HERO */
 
 .hero{
-background:linear-gradient(120deg,#ffd6e7,#e6f6ff);
-padding:80px 20px;
 text-align:center;
+padding:60px 20px;
+background:#ffe8f2;
 }
 
 .hero h1{
-font-size:42px;
 margin-bottom:10px;
 }
 
 .hero p{
 font-size:18px;
-margin-bottom:25px;
-}
-
-.btn{
-background:#ff4f93;
-color:white;
-padding:15px 30px;
-border-radius:30px;
-text-decoration:none;
-font-weight:bold;
 }
 
 /* PRODUCTS */
 
 .products{
-padding:60px 20px;
+padding:50px 20px;
 text-align:center;
 }
 
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+.grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
 gap:30px;
-max-width:1000px;
-margin:auto;
 }
 
-.product{
+.card{
 background:white;
 padding:20px;
+width:260px;
 border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
+box-shadow:0 4px 15px rgba(0,0,0,0.1);
 }
 
-.product img{
+.card img{
 width:100%;
-border-radius:10px;
+border-radius:8px;
 }
 
-.product h3{
+.card h3{
 margin:10px 0;
 }
 
-.buy-btn{
-background:#ff4f93;
-color:white;
-padding:10px 20px;
-border-radius:25px;
-text-decoration:none;
-display:inline-block;
+/* BUTTONS */
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:10px;
 margin-top:10px;
+flex-wrap:wrap;
 }
+
+.btn{
+padding:8px 14px;
+border-radius:20px;
+text-decoration:none;
+font-size:14px;
+color:white;
+}
+
+.cart{background:#ff4f93;}
+.flipkart{background:#2874f0;}
+.meesho{background:#ff3f6c;}
+.whatsapp{background:#25D366;}
 
 /* FEATURES */
 
 .features{
 background:#eef9ff;
-padding:60px 20px;
+padding:50px;
 text-align:center;
-}
-
-.features h2{
-margin-bottom:20px;
 }
 
 .features p{
 margin:10px;
-font-size:18px;
 }
 
-/* CONTACT */
+/* CART */
 
-.contact{
-padding:50px;
-text-align:center;
+.cartbox{
+position:fixed;
+top:20px;
+right:20px;
+background:white;
+padding:10px 15px;
+border-radius:6px;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
 }
 
 /* FOOTER */
 
 footer{
-background:#333;
-color:white;
 text-align:center;
 padding:20px;
-}
-
-/* WHATSAPP */
-
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
+background:#333;
 color:white;
-padding:15px 20px;
-border-radius:50px;
-text-decoration:none;
-font-weight:bold;
+margin-top:40px;
 }
 
 </style>
+
+<script>
+
+let cart=0;
+
+function addcart(){
+cart++;
+document.getElementById("cartcount").innerText=cart;
+}
+
+</script>
+
 </head>
 
 <body>
@@ -178,13 +178,15 @@ font-weight:bold;
 
 </header>
 
+<div class="cartbox">
+Cart 🛒 <span id="cartcount">0</span>
+</div>
+
 <section class="hero">
 
 <h1>Soft Care For Little Smiles</h1>
 
-<p>Premium baby products trusted by parents.</p>
-
-<a class="btn" href="https://wa.me/917990051710">Order on WhatsApp</a>
+<p>Premium baby products trusted by parents</p>
 
 </section>
 
@@ -192,29 +194,49 @@ font-weight:bold;
 
 <h2>Our Products</h2>
 
-<div class="product-grid">
+<div class="grid">
 
-<div class="product">
+<div class="card">
 
 <img src="https://images.unsplash.com/photo-1583947215259-38e31be8751f">
 
 <h3>Baby Wipes</h3>
 
-<p>Soft and gentle wipes for baby skin.</p>
+<p>Soft wipes for baby skin</p>
 
-<a class="buy-btn" href="https://wa.me/917990051710">Buy Now</a>
+<div class="buttons">
+
+<a class="btn cart" onclick="addcart()">Add Cart</a>
+
+<a class="btn flipkart" href="#">Flipkart</a>
+
+<a class="btn meesho" href="#">Meesho</a>
+
+<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
 
 </div>
 
-<div class="product">
+</div>
+
+<div class="card">
 
 <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb">
 
 <h3>Kids Sports Shoes</h3>
 
-<p>Comfortable breathable shoes for kids.</p>
+<p>Comfortable shoes for kids</p>
 
-<a class="buy-btn" href="https://wa.me/917990051710">Buy Now</a>
+<div class="buttons">
+
+<a class="btn cart" onclick="addcart()">Add Cart</a>
+
+<a class="btn flipkart" href="#">Flipkart</a>
+
+<a class="btn meesho" href="#">Meesho</a>
+
+<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+
+</div>
 
 </div>
 
@@ -228,30 +250,26 @@ font-weight:bold;
 
 <p>✔ Safe Baby Products</p>
 <p>✔ Premium Quality</p>
-<p>✔ Affordable Prices</p>
+<p>✔ Affordable Price</p>
 <p>✔ Trusted by Parents</p>
 
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="features">
 
-<h2>Contact Us</h2>
+<h2>Contact</h2>
 
-<p>📞 Mobile: 7990051710</p>
+<p>📞 7990051710</p>
 
-<p>📦 Order on WhatsApp for quick delivery</p>
-
-<a class="btn" href="https://wa.me/917990051710">Chat on WhatsApp</a>
+<p>Order on WhatsApp</p>
 
 </section>
 
 <footer>
 
-<p>© 2026 PehliKilkari Baby Store</p>
+© 2026 PehliKilkari Baby Store
 
 </footer>
-
-<a class="whatsapp" href="https://wa.me/917990051710">WhatsApp</a>
 
 </body>
 </html>
