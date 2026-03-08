@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>PehliKilkari | Baby & Kids Store</title>
+<title>PehliKilkari Baby Store</title>
 
-<meta name="description" content="Buy baby wipes, baby shoes, booties, baby toys and kids accessories online from PehliKilkari.">
+<meta name="description" content="Buy baby wipes, baby shoes, toys and kids accessories from PehliKilkari">
 
 <style>
 
 body{
-font-family:Arial;
 margin:0;
+font-family:Arial;
 background:#f7fbff;
 }
 
@@ -26,12 +27,21 @@ align-items:center;
 padding:15px 40px;
 background:white;
 box-shadow:0 2px 10px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
 }
 
 .logo{
 font-size:22px;
 font-weight:bold;
 color:#ff4f93;
+}
+
+nav a{
+margin-left:20px;
+text-decoration:none;
+font-weight:bold;
+color:black;
 }
 
 /* HERO */
@@ -43,11 +53,10 @@ display:flex;
 align-items:center;
 justify-content:center;
 color:white;
-text-align:center;
 }
 
 .hero h1{
-background:rgba(0,0,0,0.4);
+background:rgba(0,0,0,0.5);
 padding:15px 30px;
 border-radius:8px;
 }
@@ -61,8 +70,8 @@ text-align:center;
 
 .grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-gap:30px;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
 max-width:1100px;
 margin:auto;
 }
@@ -91,23 +100,51 @@ flex-wrap:wrap;
 
 .btn{
 padding:7px 12px;
-border-radius:18px;
-font-size:13px;
+border-radius:20px;
 text-decoration:none;
+font-size:13px;
 color:white;
 }
 
 .meesho{background:#ff3f6c;}
-.flipkart{background:#2874f0;}
 .whatsapp{background:#25D366;}
-.cart{background:#ff4f93;}
+
+/* WHY US */
+
+.why{
+background:#eef9ff;
+padding:60px 20px;
+text-align:center;
+}
+
+/* CONTACT */
+
+.contact{
+padding:50px;
+text-align:center;
+}
+
+/* FOOTER */
 
 footer{
-margin-top:40px;
 background:#333;
 color:white;
 text-align:center;
 padding:20px;
+}
+
+/* FLOATING WHATSAPP */
+
+.whatsapp-float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+color:white;
+padding:15px 18px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
 }
 
 </style>
@@ -120,6 +157,15 @@ padding:20px;
 
 <div class="logo">👶 PehliKilkari</div>
 
+<nav>
+
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#why">Why Us</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
 </header>
 
 <section class="hero">
@@ -128,7 +174,7 @@ padding:20px;
 
 </section>
 
-<section class="products">
+<section id="products" class="products">
 
 <h2>Our Products</h2>
 
@@ -142,8 +188,7 @@ padding:20px;
 
 <div class="buttons">
 
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="YOUR_MEESHO_LINK">Meesho</a>
 
 </div>
 
@@ -157,8 +202,7 @@ padding:20px;
 
 <div class="buttons">
 
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="YOUR_MEESHO_LINK">Meesho</a>
 
 </div>
 
@@ -172,23 +216,7 @@ padding:20px;
 
 <div class="buttons">
 
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1519689680058-324335c77eba">
-
-<h3>Baby Sleeping Bag</h3>
-
-<div class="buttons">
-
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="YOUR_MEESHO_LINK">Meesho</a>
 
 </div>
 
@@ -198,12 +226,11 @@ padding:20px;
 
 <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30">
 
-<h3>Newborn Gift Set</h3>
+<h3>Baby Sleeping Bag</h3>
 
 <div class="buttons">
 
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="YOUR_MEESHO_LINK">Meesho</a>
 
 </div>
 
@@ -217,8 +244,7 @@ padding:20px;
 
 <div class="buttons">
 
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="https://www.meesho.com/PEHLIKILKARI?ms=2&page=1">Meesho</a>
 
 </div>
 
@@ -232,23 +258,7 @@ padding:20px;
 
 <div class="buttons">
 
-<a class="btn meesho" href="https://www.meesho.com/PEHLIKILKARI?ms=2&page=1">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1584473457493-17c65dcbec04">
-
-<h3>Baby Toys</h3>
-
-<div class="buttons">
-
-<a class="btn meesho" href="#">Meesho</a>
-<a class="btn whatsapp" href="https://wa.me/917990051710">Buy</a>
+<a class="btn meesho" href="YOUR_MEESHO_LINK">Meesho</a>
 
 </div>
 
@@ -258,11 +268,38 @@ padding:20px;
 
 </section>
 
+<section id="why" class="why">
+
+<h2>Why Choose PehliKilkari</h2>
+
+<p>✔ Premium baby products</p>
+<p>✔ Affordable price</p>
+<p>✔ Trusted by parents</p>
+
+</section>
+
+<section id="contact" class="contact">
+
+<h2>Contact Us</h2>
+
+<p>📞 7990051710</p>
+
+<p>Order directly on WhatsApp</p>
+
+</section>
+
 <footer>
 
 © 2026 PehliKilkari Baby Store
 
 </footer>
 
+<a class="whatsapp-float" href="https://wa.me/917990051710">
+
+WhatsApp
+
+</a>
+
 </body>
+
 </html>
